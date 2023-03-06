@@ -8,7 +8,7 @@ const {
 } = require("whatsapp-web.js");
 
 console.log("Parte 1");
-const client = new Client();
+const client = new Client({ titiritero: { headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox']}, session: sessionCfg });
 console.log("Parte 2");
 
 client.on("ready", async () => {
