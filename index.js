@@ -7,11 +7,7 @@ const {
   List,
 } = require("whatsapp-web.js");
 const client = new Client({
-    authStrategy: new LocalAuth(),
-    puppeteer: {
-        headless: true,
-        args: ['--no-sandbox']
-    }
+  authStrategy: new LocalAuth(),
 });
 
 client.on("qr", (qr) => {
