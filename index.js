@@ -6,9 +6,6 @@ const {
   Location,
   List,
 } = require("whatsapp-web.js");
-const client = new Client({
-  authStrategy: new LocalAuth(),
-});
 
 const client = new Client({puppeteer: {args: ["--no-sandbox"]}})
 
