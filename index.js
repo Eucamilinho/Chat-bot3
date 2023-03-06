@@ -8,9 +8,7 @@ const {
 } = require("whatsapp-web.js");
 
 console.log("Parte 1");
-const client = new Client({
-  authStrategy: new LocalAuth(),
-});
+const client = new Client();
 console.log("Parte 2");
 
 client.on("ready", async () => {
