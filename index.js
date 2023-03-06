@@ -7,9 +7,9 @@ const {
   List,
 } = require("whatsapp-web.js");
 
-consol.log("Parte 1");
+console.log("Parte 1");
 const client = new Client({puppeteer: {args: ["--no-sandbox"]}})
-consol.log("Parte 2");
+console.log("Parte 2");
 
 client.on("ready", async () => {
   console.clear();
