@@ -51,7 +51,9 @@ class WsTransporter extends whatsapp_web_js_1.Client {
     super({
       authStrategy: new whatsapp_web_js_1.LocalAuth(),
       puppeteer: { headless: true },
-      args: ['--no-sandbox']
+      args: ['--no-sandbox',
+             "--disable-setuid-sandbox",
+             "--unhandled-rejections=strict"]
     });
     this.status = false;
     this.generateImage = (base64) => {
