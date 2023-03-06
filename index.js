@@ -10,9 +10,7 @@ const client = new Client({
   authStrategy: new LocalAuth(),
 });
 
-client.on("qr", (qr) => {
-  qrcode.generate(qr, { small: true });
-});
+const client = new Client({puppeteer: {args: ["--no-sandbox"]}})
 
 client.on("ready", async () => {
   console.clear();
