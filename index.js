@@ -7,7 +7,7 @@ const {
   List,
 } = require("whatsapp-web.js");
 const client = new Client({
-    session: sessionData,
+    authStrategy: new LocalAuth(),
     puppeteer: {
         headless: true,
         args: ['--no-sandbox']
