@@ -7,8 +7,8 @@ const {
   List,
 } = require("whatsapp-web.js");
 
-const client = new Client({
-  authStrategy: new LocalAuth(),
+const browser = await puppeteer.launch({
+  ignoreDefaultArgs: ['--disable-extensions'],
 });
 
 client.on("ready", async () => {
